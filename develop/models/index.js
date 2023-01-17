@@ -1,8 +1,10 @@
 // import models
-const Product = require('./Product');
-const Category = require('./Category');
-const Tag = require('./Tag');
-const ProductTag = require('./ProductTag');
+const Product = require('./Product-seeds');
+const Category = require('./Category-seeds');
+const Tag = require('./Tag-seeds');
+const ProductTag = require('./ProductTag-seeds');
+
+const sequelize = require('../config/connection');
 
 // Products belongsTo Category
 Product.belongsTo(Category, {
