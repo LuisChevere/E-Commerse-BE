@@ -53,7 +53,7 @@ router.put('/:id', async (req, res) => {
         },
       }
     );
-    if (!updateCategory) {
+    if (!updateCategory[0]) {
       res.status(404).json({ message: 'No category with said id!'})
       return;
     }
